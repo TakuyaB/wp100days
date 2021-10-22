@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+/*
+Theme Name: 最小構成ワードプレステーマ
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --contents-width: 1280px;
+}
+
+html,
+body {
+    background: lightblue;
+}
+
+.wrapper {
+    max-width: var(--contents-width);
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* ヘッダー */
+header .wrapper {
+    background: lightcoral;
+}
+
+/* コンテンツ領域 */
+.container .wrapper {
+    background: lightgreen;
+}
+
+.container .left {
+    width: 70%;
+}
+
+.container .right {
+    width: 30%;
+}
+
+/* メインコンテンツ領域 */
+main {
+    background: lightsalmon
+}
+
+/* サイドバー */
+aside {
+    background: lightskyblue
+}
+
+/* フッター */
+footer .wrapper {
+    background: lightyellow;
+}
+
+@media (max-width: 767px) {
+    .flex {
+        display: column;
+    }
+    .container .left,
+    .container .right {
+        width: 100%;
+    }
+}
